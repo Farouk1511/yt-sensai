@@ -63,7 +63,9 @@ export async function updateUser(data: any) {
       {
         timeout: 10000,
       }
+
     );
+    return {success: true, ...result};
   } catch (err) {
     throw new Error(err instanceof Error ? err.message : String(err));
   }

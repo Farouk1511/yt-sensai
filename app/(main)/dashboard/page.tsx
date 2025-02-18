@@ -5,7 +5,7 @@ const Page = async () => {
     
     const {isOnboarded} = await getUserOnboardingStatus()
 
-    if(isOnboarded){
+    if(!isOnboarded){
         redirect("/onboarding")
     }
     return (
